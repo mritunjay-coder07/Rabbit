@@ -12,7 +12,7 @@ const MainDashBoard = () => {
     return(
         <div>
             <FetchingData setPosts={setPosts}/>
-            <div style={{borderBottom:"1px solid Black", marginBottom:"1px", paddingBottom:"20px"}}>
+            <div style={{borderBottom:"1px solid Black", marginBottom:"1px"}}>
                 <Navbar/>
             </div>
             <div style={{display:"flex"}}>
