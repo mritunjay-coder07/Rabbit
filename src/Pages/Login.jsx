@@ -20,8 +20,19 @@ const Login = () => {
 
   return (
     <div className="auth-container">
+      <div className="orb orb1"></div>
+      <div className="orb orb2"></div>
+      <div className="orb orb3"></div>
       <form className="auth-card" onSubmit={handleSubmit}>
-        <h1>Login</h1>
+        <button type="button" className="logo-button" onClick={() => navigate("/")} style={{borderRadius:100, width:40, height: 40, display:"flex", justifyContent:"center", alignItems:"center", marginBottom:20}}>
+          <img 
+            className="Img1" 
+            src="src/Pages/arrow.png" 
+            alt="logo"
+            style={{width:60, display:"flex", justifyContent:"center", alignItems:"center"}}
+          />
+        </button>
+        <h1 >Login</h1>
 
         <input
           type="text"
@@ -40,7 +51,7 @@ const Login = () => {
         <button type="submit">Login</button>
 
         <p>
-          Don’t have an account? <Link to="/signup">Signup</Link>
+          Don't have an account? <Link to="/Signup">Signup</Link>
         </p>
       </form>
     </div>

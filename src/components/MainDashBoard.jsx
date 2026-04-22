@@ -8,6 +8,7 @@ import SidePanel from './SidePanel';
 
 const MainDashBoard = () => {
     const [posts , setPosts] = useState("");
+    console.log(posts)
     return(
         <div>
             <FetchingData setPosts={setPosts}/>

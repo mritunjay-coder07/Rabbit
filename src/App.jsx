@@ -2,12 +2,14 @@ import { useState } from 'react'
 import MainDashBoard from './components/MainDashBoard'
 import Login from './Pages/Login'
 import Signup from './Pages/Signup'
+import LandingPage from './Pages/LandingPage'
 import { Routes,Route } from 'react-router-dom'
 
 function App() {
   return(
     <Routes>
-      <Route path="/" element={<Login/>}/>
+      <Route path="/" element={<LandingPage/>}/>
+      <Route path="/Login" element={<Login/>}/>
       <Route path="/Signup" element={<Signup/>}/>
       <Route path='/DashBoard' element={<MainDashBoard/>}/>
     </Routes>
