@@ -7,11 +7,14 @@ import SidePanel from './SidePanel';
 
 
 const MainDashBoard = () => {
+HEAD
     const [posts , setPosts] = useState("");
     console.log(posts)
+
+
     return(
         <div>
-            <FetchingData setPosts={setPosts}/>
+          
             <div style={{borderBottom:"1px solid Black", marginBottom:"1px", paddingBottom:"20px"}}>
                 <Navbar/>
             </div>
