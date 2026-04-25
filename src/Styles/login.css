@@ -246,6 +246,15 @@ body {
   animation: floatOrb 12s ease-in-out infinite;
 }
 
+.orb6{
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.2;
+  z-index: 0;
+  animation: floatOrb 12s ease-in-out infinite;
+}
+
 .orb1 {
   width: 200px;
   height: 200px;
@@ -270,6 +279,16 @@ body {
   top: 50%;
   left: 70%;
   animation-delay: 6s;
+}
+
+.orb4{
+  width: 180px;
+  height: 180px;
+  background: #00ff85;
+  top: 50%;
+  left: 70%;
+  animation-delay: 6s;
+
 }
 
 @keyframes floatOrb {

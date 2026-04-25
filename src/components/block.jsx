@@ -8,33 +8,33 @@ const Block = ({x})=>{
   const [join,setJoin] = useState("#0b56c7ff")
 
   function upvote(){
-    if (dvote == "red"){
-      setuVote("red")
+    if (dvote == "yellow"){
+      setuVote("yellow")
       setdVote("white")
       setVotes(votes+1)
     }
-    else if (uvote == "red"){
+    else if (uvote == "yellow"){
       setuVote("white")
       setVotes(votes-1)
     }
     else{
-      setuVote("red")
+      setuVote("yellow")
       setVotes(votes+1)
     }
   }
   function downvote(){
-    if (uvote == "red"){
-      setdVote("red")
+    if (uvote == "yellow"){
+      setdVote("yellow")
       setuVote("white")
 
       setVotes(votes-1)
     }
-    else if (dvote == "red"){
+    else if (dvote == "yellow"){
       setdVote("white")
       setVotes(votes-1)
     }
     else{
-      setdVote("red")
+      setdVote("yellow")
       setVotes(votes+1)
     }
   }

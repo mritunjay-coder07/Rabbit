@@ -8,29 +8,58 @@ import RightPanel from './RightPanel';
 
 
 const MainDashBoard = () => {
-HEAD
-    const [posts , setPosts] = useState("");
-    console.log(posts)
-    return(
-        <div>
-            <div style={{borderBottom:"1px solid Black", marginBottom:"1px", paddingBottom:"20px"}}>
+    const [posts, setPosts] = useState("");
 
-            <FetchingData setPosts={setPosts}/>
-            <div style={{borderBottom:"1px solid Black", marginBottom:"1px"}}>
-            <Navbar/>
+    return (
+
+        <div style={{ height: "100vh", overflow: "hidden" }}> {/* 🔥 block body scroll */}
+            <div className="orb orb1"></div>
+      <div className="orb6 orb2"></div>
+      <div className="orb6 orb3"></div>
+            <div style={{ borderBottom: "1px solid black" }}>
+                <FetchingData setPosts={setPosts} />
+                <Navbar />
             </div>
-            <div style={{display:"flex"}}>
-                <div style={{borderRight:"1px solid black", height:"100vh",marginRight:"40px"}} >
-                <SidePanel/>
+
+            <div style={{ display: "flex", height: 1200, width: 12000 }}> {/* adjust height */}
+
+                {/* Sidebar */}
+                <div style={{
+                    width: "250px",
+                    minWidth: "240px",
+                    borderRight: "1px solid black",
+                    overflowY: "auto",
+                    overscrollBehavior: "contain"
+                }}>
+                    <SidePanel />
                 </div>
-                <div style={{padding:"100px",marginLeft:"220px",backgroundColor:"#0E1113"}}>
-                <Main/>
+
+                {/* Main */}
+                <div style={{
+                    flex: 1,
+                    backgroundColor: "#0E1113",
+                    overflowY: "auto",
+                    padding: "130px"
+                }}>
+                    <div style={{
+                        width: "100%",
+                        maxWidth: "1100px"
+                    }}></div>
+                    <Main />
                 </div>
-                <div style={{marginRight:"260px",padding:"100px"}}>
-                <RightPanel />
+
+                {/* Right Panel */}
+                <div style={{
+                    width: "300px",
+                    minWidth: "300px",
+                    overflowY: "auto",
+                    overscrollBehavior: "contain",
+                    padding: "20px"
+                }}>
+                    <RightPanel />
                 </div>
+
             </div>
-        </div>
         </div>
     )
 }
