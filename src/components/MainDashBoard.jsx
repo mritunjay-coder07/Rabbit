@@ -10,22 +10,23 @@ const MainDashBoard = () => {
 HEAD
     const [posts , setPosts] = useState("");
     console.log(posts)
-
-
     return(
         <div>
-          
             <div style={{borderBottom:"1px solid Black", marginBottom:"1px", paddingBottom:"20px"}}>
-                <Navbar/>
+
+            <FetchingData setPosts={setPosts}/>
+            <div style={{borderBottom:"1px solid Black", marginBottom:"1px"}}>
+            <Navbar/>
             </div>
             <div style={{display:"flex"}}>
-                <div style={{borderRight:"1px solid black", height:"100vh",marginRight:"40px",paddingRight:"100px", paddingTop:"50px"}} >
-                    <SidePanel/>
+                <div style={{borderRight:"1px solid black", height:"100vh",marginRight:"40px"}} >
+                <SidePanel/>
                 </div>
                 <div style={{padding:"100px"}}>
-                    <Main/>
+            <Main/>
                 </div>
             </div>
+        </div>
         </div>
     )
 }
