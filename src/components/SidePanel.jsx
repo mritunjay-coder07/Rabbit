@@ -1,18 +1,16 @@
 import React, { useState } from 'react'
 import "../Styles/Sidebar.css"
 
-const SidePanel = () => {
+const SidePanel = ({active,setActive,notes}) => {
 
-  const [active , setActive] = useState("home")
-  console.log(active)
-
-  const [communities , setCommunities] = useState([])
 
 
   return (
     <div className = "sidebar">
       <div className="sidebar-section1">
-        
+
+
+
         <div style={active === "home" ? {backgroundColor:"#2d2f31"} : null} onClick={()=>setActive("home")} className='sidebar-item '>Home</div>
 
         <div onClick={()=>setActive("popular")} className='sidebar-item' style={active === "popular" ? {backgroundColor:"#2d2f31"} : null}>Popular</div>
@@ -28,16 +26,30 @@ const SidePanel = () => {
         </div>
 
         <div className="sidebar-item">
-          🐰 r/rabbit <span className="star">⭐</span>
+          r/rabbit <span className="star">⭐</span>
         </div>
 
         <div className="sidebar-item">
-          ⚛️ r/reactjs <span className="star">⭐</span>
+           r/reactjs <span className="star">⭐</span>
         </div>
 
         <div className="sidebar-item">
-          🌐 r/webdev <span className="star">⭐</span>
+          r/webdev <span className="star">⭐</span>
         </div>
+
+        {
+          notes.map((x)=>{
+            return(
+              <>
+              <div
+                  className="sidebar-item">
+           {x.subreddit }<span className="star">⭐</span>
+              </div>
+              </>
+            )
+          })
+
+        }
 
       </div>
 

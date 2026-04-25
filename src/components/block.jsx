@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 
-const Block = ({x})=>{
+const Block = ({setChannel,addnotes,x,setFav,fav})=>{
       const [uvote , setuVote] = useState("white")
   const [dvote , setdVote] = useState("white")
   const [join,setJoin] = useState("#0b56c7ff")
@@ -39,6 +39,20 @@ const Block = ({x})=>{
     }
   }
     const [votes , setVotes] = useState(x.upvotes)
+    const [clr,setClr] = useState("white")
+
+    function chngclr(){
+      setFav([...fav,x])
+      console.log(fav)
+
+
+      if (clr === "white" ){
+        setClr("#BB271A")
+      }
+      else{ 
+      setClr("white")
+      }
+    }
     
     return(
              <div style={{width:"60vw"}}>
@@ -48,13 +62,17 @@ const Block = ({x})=>{
                  <div onClick={()=>setJoin("#648EFC")} style={{display:"flex",style:"100px",justifyContent:"space-between",width:"190px",height:"70px"}}>
                 <img src={x.thumbnail} alt="" style={{width:"40px",height:"40px",borderRadius:"50%",margin:"10px"}}/>
                 <h4 style={{color:'white', marginTop:"22px"}}>{x.subreddit}</h4>
-    
-                <div style={{position:"relative",left:"555px",top:"15px",display:"flex"}}>
+
+<div onClick={chngclr} style={{width:"100px",height:"30px",zIndex:"100000",position:"relative",left:"530px",top:"13px"}}>
+<svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill={clr}><path d="m479-91-56-50q-107-99-177.5-170.5T133-441q-42-58-58.5-105.5T58-642q0-99 66.5-166.5T289-876q56 0 104.5 24.5T479-780q42-49 88.5-72.5T669-876q99 0 166 67.5T902-642q0 48-17 95t-58.5 105q-41.5 58-112 130T536-141l-57 50Z"/></svg>  </div>    
+                <div onClick={()=>{setChannel(x);addnotes()}} style={{position:"relative",left:"555px",top:"15px",display:"flex"}}>
+
                 <div  style={{width:"30px",height:"30px",cursor:"pointer",backgroundColor:"#0b56c7ff",borderTopLeftRadius:"50%",borderBottomLeftRadius:"50%"}}></div>
-                <div  style={{width:"30px",height:"30px",cursor:"pointer",backgroundColor:"#0b56c7ff",display:"flex",justifyContent:"center",alignItems:"center",fontFamily:"monospace",fontSize:"15px",zIndex:"1"}}>
-    Join
+                <div   style={{width:"30px",height:"30px",cursor:"pointer",backgroundColor:"#0b56c7ff",display:"flex",justifyContent:"center",alignItems:"center",fontFamily:"monospace",fontSize:"15px",zIndex:"1"}}>
+        Join
                 </div>
                 <div  style={{width:"30px",height:"30px",cursor:"pointer",backgroundColor:"#0b56c7ff",borderTopRightRadius:"50%",borderBottomRightRadius:"50%",zIndex:"0"}}></div>
+                
                 </div>
     
                 </div>
@@ -67,7 +85,7 @@ const Block = ({x})=>{
     
     
     
-    
+    {/* upvote downvote button */}
     
                 <div style={{backgroundColor:"transparent",display:"flex",width:"120px",height:"40px",alignItems:"center"}}>
     
@@ -87,7 +105,7 @@ const Block = ({x})=>{
     
                 </div>
     
-    
+    {/* comment section */}
     
               <div style={{backgroundColor:"transparent",display:"flex",width:"100px",height:"40px",justifyContent:'center',alignItems:"center"}}>
     
@@ -135,9 +153,11 @@ const Block = ({x})=>{
     
     
               </div>
+    
+    
               </div>
     
-                <div style={{height:"30px",color:"#3a3a3aff"}}> _____________________________________________________________________________________________</div>
+                <div style={{height:"30px",color:"#3a3a3aff"}}> _____________________________________________________________________________________________________________________________________</div>
              </div>
           )
 }

@@ -11,6 +11,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // ✅ fixed credentials
     if (username === "user@123" && password === "abc123") {
         navigate("/DashBoard")
     } else {
