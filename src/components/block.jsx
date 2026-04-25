@@ -67,7 +67,7 @@ const Block = ({x})=>{
     
     
     
-    {/* upvote downvote button */}
+    
     
                 <div style={{backgroundColor:"transparent",display:"flex",width:"120px",height:"40px",alignItems:"center"}}>
     
@@ -87,7 +87,7 @@ const Block = ({x})=>{
     
                 </div>
     
-    {/* comment section */}
+    
     
               <div style={{backgroundColor:"transparent",display:"flex",width:"100px",height:"40px",justifyContent:'center',alignItems:"center"}}>
     
@@ -135,11 +135,9 @@ const Block = ({x})=>{
     
     
               </div>
-    
-    
               </div>
     
-                <div style={{height:"30px",color:"#3a3a3aff"}}> _____________________________________________________________________________________________________________________________________</div>
+                <div style={{height:"30px",color:"#3a3a3aff"}}> _____________________________________________________________________________________________</div>
              </div>
           )
 }

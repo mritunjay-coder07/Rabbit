@@ -12,7 +12,7 @@ const MainDashBoard = () => {
 
     return (
 
-        <div style={{ height: "100vh", overflow: "hidden" }}> {/* 🔥 block body scroll */}
+        <div style={{ height: "100vh", overflow: "hidden" }}> 
             <div className="orb orb1"></div>
       <div className="orb6 orb2"></div>
       <div className="orb6 orb3"></div>
@@ -21,9 +21,9 @@ const MainDashBoard = () => {
                 <Navbar />
             </div>
 
-            <div style={{ display: "flex", height: 1200, width: 12000 }}> {/* adjust height */}
+            <div style={{ display: "flex", height: 1200, width: 12000 }}> 
 
-                {/* Sidebar */}
+                
                 <div style={{
                     width: "250px",
                     minWidth: "240px",
@@ -34,7 +34,7 @@ const MainDashBoard = () => {
                     <SidePanel />
                 </div>
 
-                {/* Main */}
+                
                 <div style={{
                     flex: 1,
                     backgroundColor: "#0E1113",
@@ -48,7 +48,7 @@ const MainDashBoard = () => {
                     <Main />
                 </div>
 
-                {/* Right Panel */}
+                
                 <div style={{
                     width: "300px",
                     minWidth: "300px",

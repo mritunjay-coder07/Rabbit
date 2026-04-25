@@ -12,9 +12,7 @@ const SidePanel = () => {
   return (
     <div className = "sidebar">
       <div className="sidebar-section1">
-
-
-
+        
         <div style={active === "home" ? {backgroundColor:"#2d2f31"} : null} onClick={()=>setActive("home")} className='sidebar-item '>Home</div>
 
         <div onClick={()=>setActive("popular")} className='sidebar-item' style={active === "popular" ? {backgroundColor:"#2d2f31"} : null}>Popular</div>
