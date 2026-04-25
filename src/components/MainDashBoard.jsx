@@ -18,11 +18,11 @@ HEAD
             <div style={{borderBottom:"1px solid Black", marginBottom:"1px"}}>
             <Navbar/>
             </div>
-            <div style={{display:"flex"}}>
+            <div style={{display:"flex",backgroundColor:"#0E1113"}}>
                 <div style={{borderRight:"1px solid black", height:"100vh",marginRight:"40px"}} >
                 <SidePanel/>
                 </div>
-                <div style={{padding:"100px"}}>
+                <div style={{padding:"100px",marginLeft:"250px",backgroundColor:"#0E1113"}}>
             <Main/>
                 </div>
             </div>
