@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "../Styles/login.css";
+import rabbit from "./rabbit.png";
+import logo from "./logo.jpeg";
 
 const LandingPage = () => {
   return (
@@ -11,12 +13,12 @@ const LandingPage = () => {
   <div className="neon-card">
     
     <img 
-      src="src/Pages/logo.jpeg" 
+      src={logo} 
       className="logo"
     />
 
     <div className="title">
-        <img src='src/Pages/rabbit.png' style={{width:250}}/>
+        <img src={rabbit} style={{width:250}}/>
     </div>
     
     <Link to="/Login" className="login-button">Login</Link>

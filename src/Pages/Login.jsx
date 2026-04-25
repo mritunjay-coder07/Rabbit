@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "../Styles/login.css";
+import arrow from "./arrow.png";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -27,7 +28,7 @@ const Login = () => {
         <button type="button" className="logo-button" onClick={() => navigate("/")} style={{borderRadius:100, width:40, height: 40, display:"flex", justifyContent:"center", alignItems:"center", marginBottom:20}}>
           <img 
             className="Img1" 
-            src="src/Pages/arrow.png" 
+            src={arrow} 
             alt="logo"
             style={{width:60, display:"flex", justifyContent:"center", alignItems:"center"}}
           />

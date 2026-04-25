@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
-import "../Styles/login.css"; 
+import "../Styles/login.css";    
+import arrow from "./arrow.png";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ const Signup = () => {
         <button type="button" className="logo-button" onClick={() => navigate("/Login")} style={{borderRadius:100, width:40, height: 40, display:"flex", justifyContent:"center", alignItems:"center", marginBottom:20}}>
           <img 
             className="Img1" 
-            src="src/Pages/arrow.png" 
+            src={arrow} 
             alt="logo"
             style={{width:60, display:"flex", justifyContent:"center", alignItems:"center"}}
           />
