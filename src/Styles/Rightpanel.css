@@ -1,0 +1,46 @@
+.rightPanel {
+  position: fixed;
+  top: 60px;
+  right: 0;
+  width: 260px;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  z-index: 999;
+}
+.rightPanel {
+  width: 260px;
+  min-height: calc(100vh - 70px);
+  background-color: #1a1a1b;
+  color: white;
+  padding: 18px 12px;
+  border-right: 1px solid #343536;
+}
+.rightPanel-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.rightPanel-item {
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.2s ease;
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rightPanel-item:hover {
+  background-color: #2d2f31;
+}
+.rightPanel-title {
+  font-size: 12px;
+  color: #818384;
+  margin: 14px 10px 8px;
+  letter-spacing: 0.5px;
+}
+.rightPanel-divider {
+  height: 1px;
+  background-color: #343536;
+  margin: 14px 0;
+}

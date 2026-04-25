@@ -11,7 +11,7 @@ const SidePanel = () => {
 
   return (
     <div className = "sidebar">
-      <div className="sidebar-section">
+      <div className="sidebar-section1">
 
 
 
@@ -23,7 +23,7 @@ const SidePanel = () => {
         <div style={active === "news" ? {backgroundColor:"#2d2f31"} : null} onClick={()=>setActive("news")} className='sidebar-item'>News</div>
 
 
-        <div className="sidebar-section">
+        <div className="sidebar-section2">
         <p className="sidebar-title">COMMUNITIES</p>
         <div className="sidebar-item manage">
           ⚙️ Manage Communities

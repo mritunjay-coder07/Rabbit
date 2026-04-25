@@ -1,10 +1,38 @@
-import React, { useState } from 'react'
+import React from 'react';
+import { useState } from 'react';
 import FetchingData from './FetchingData'
 import Block from './block' 
 
 
  const Main = () => {
   const [ posts, setPosts] = useState([]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   return (
@@ -14,7 +42,107 @@ import Block from './block'
          <Block x = {x} />
     )}
     </div>
-  )
-}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+)
+}
 export default Main
