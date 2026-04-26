@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Styles/Rightpanel.css";
 
 const communities = [
@@ -15,6 +15,10 @@ const communities = [
 ];
 
 const RightPanel = () => {
+  const lessCoummunities  = communities.slice(1,4);
+  console.log(lessCoummunities)
+  const [viewpPopularCommunities,setViewPopularCommunitites] = useState(lessCoummunities);
+
   return (
     <div className="rightPanel">
       <div className="rightPanel-section">
@@ -22,7 +26,7 @@ const RightPanel = () => {
 
         <div className="rightPanel-title">POPULAR COMMUNITIES</div>
 
-        {communities.map((item, index) => (
+        {viewpPopularCommunities.map((item, index) => (
           <div key={index} className="rightPanel-item">
             
             <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
@@ -38,8 +42,8 @@ const RightPanel = () => {
 
         <div className="rightPanel-divider"></div>
 
-        <div className="rightPanel-item" style={{ color: "#4ea1ff" }}>
-          See less
+        <div onClick={()=>setViewPopularCommunitites(viewpPopularCommunities === lessCoummunities ? communities: lessCoummunities )} className="rightPanel-item" style={{ color: "#4ea1ff" }}>
+        {viewpPopularCommunities === lessCoummunities ?  "View More": "View Less"}
         </div>
 
       </div>
